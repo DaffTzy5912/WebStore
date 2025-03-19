@@ -1,27 +1,10 @@
 document.addEventListener("DOMContentLoaded", function() {
-    document.querySelectorAll(".buy-button").forEach(button => {
-        button.addEventListener("click", function() {
-            const productName = this.dataset.name;
-            const productPrice = this.dataset.price;
-            buyProduct(productName, productPrice);
-        });
-    });
-
-    function buyProduct(productName, productPrice) {
-        const phoneNumber = "6285736486023";
-        const message = `Halo, saya ingin membeli produk *${productName}* seharga *Rp ${parseInt(productPrice).toLocaleString()}*.`;
-        window.open(`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`, "_blank");
-    }
-});
-
-document.addEventListener("DOMContentLoaded", function() {
     const cartButton = document.getElementById("cart-button");
     const cartModal = document.getElementById("cart-modal");
     const closeModal = document.querySelector(".close-modal");
     const cartItemsList = document.getElementById("cart-items");
     const cartTotal = document.getElementById("cart-total");
     const checkoutButton = document.getElementById("checkout-button");
-
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
     // **Update UI Keranjang**
@@ -44,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function() {
         localStorage.setItem("cart", JSON.stringify(cart));
     }
 
-    // **Tambah Produk ke Keranjang**
+    // **Tambah Produk ke Keranjang (Bukan ke WhatsApp Langsung)**
     document.querySelectorAll(".buy-button").forEach(button => {
         button.addEventListener("click", function() {
             const name = this.dataset.name;
@@ -52,6 +35,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
             cart.push({ name, price });
             updateCartUI();
+            alert(`${name} telah ditambahkan ke keranjang!`);
         });
     });
 
@@ -61,16 +45,9 @@ document.addEventListener("DOMContentLoaded", function() {
         updateCartUI();
     });
 
-    // **Tutup Modal Saat Klik Tombol "×"**
+    // **Tutup Modal**
     closeModal.addEventListener("click", () => {
         cartModal.style.display = "none";
-    });
-
-    // **Tutup Modal Jika Klik di Luar Kotak Modal**
-    window.addEventListener("click", function(event) {
-        if (event.target === cartModal) {
-            cartModal.style.display = "none";
-        }
     });
 
     // **Hapus Produk dari Keranjang**
@@ -101,34 +78,10 @@ document.addEventListener("DOMContentLoaded", function() {
         message += `\nTotal: Rp ${total.toLocaleString()}`;
         window.open(`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`, "_blank");
 
+        // Kosongkan keranjang setelah checkout
         cart = [];
         updateCartUI();
     });
 
     updateCartUI();
-});
-
-function toggleCartModal(show) {
-    const cartModal = document.getElementById("cart-modal");
-    if (show) {
-        cartModal.style.display = "flex";
-        document.body.style.overflow = "hidden"; // Mencegah scroll
-    } else {
-        cartModal.style.display = "none";
-        document.body.style.overflow = "auto"; // Mengembalikan scroll
-    }
-}
-
-document.getElementById("cart-button").addEventListener("click", () => {
-    toggleCartModal(true);
-});
-
-document.querySelector(".close-modal").addEventListener("click", () => {
-    toggleCartModal(false);
-});
-
-window.addEventListener("click", function(event) {
-    if (event.target === document.getElementById("cart-modal")) {
-        toggleCartModal(false);
-    }
 });
