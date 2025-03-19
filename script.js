@@ -8,8 +8,8 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     function buyProduct(productName, productPrice) {
-        const phoneNumber = "6281234567890";
-        const message = `Halo, saya ingin membeli *${productName}* seharga *Rp ${parseInt(productPrice).toLocaleString()}*.`;
+        const phoneNumber = "6285736486023";
+        const message = `Halo, saya ingin membeli produk *${productName}* seharga *Rp ${parseInt(productPrice).toLocaleString()}*.`;
         window.open(`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`, "_blank");
     }
 });
@@ -89,7 +89,7 @@ document.addEventListener("DOMContentLoaded", function() {
             return;
         }
 
-        const phoneNumber = "6281234567890";
+        const phoneNumber = "6285736486023";
         let message = "Halo, saya ingin membeli:\n\n";
         let total = 0;
 
