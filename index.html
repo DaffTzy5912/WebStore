@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Store</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <header>
+    <div class="logo">My Store</div>
+    <nav>
+        <ul>
+            <li><a href="#">Beranda</a></li>
+            <li><a href="#">Produk</a></li>
+            <li><a href="#">Tentang</a></li>
+            <li><a href="#">Kontak</a></li>
+        </ul>
+        <button id="cart-button">
+    🛒 <span id="cart-count">0</span>
+</button>
+    </nav>
+</header>
+
+<!-- Modal Keranjang -->
+<div id="cart-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <h2>Keranjang Belanja</h2>
+        <ul id="cart-items"></ul>
+        <p>Total: <span id="cart-total">Rp 0</span></p>
+        <button id="checkout-button">Checkout</button>
+    </div>
+</div>
+
+    <main>
+        <section class="product-slider">
+            <div class="slider-container">
+                <div class="slider">
+                    <article class="product">
+                        <figure><img src="https://files.catbox.moe/u63z2s.jpg" alt="Produk 1"></figure>
+                        <h3>Produk 1</h3>
+                        <p>Rp 100.000</p>
+                        <button class="buy-button" data-name="Produk 1" data-price="100000">Checkout</button>
+                    </article>
+
+                    <article class="product">
+                        <figure><img src="https://files.catbox.moe/u63z2s.jpg" alt="Produk 2"></figure>
+                        <h3>Produk 2</h3>
+                        <p>Rp 150.000</p>
+                        <button class="buy-button" data-name="Produk 2" data-price="150000">Checkout</button>
+                    </article>
+
+                    <article class="product">
+                        <figure><img src="https://files.catbox.moe/u63z2s.jpg" alt="Produk 3"></figure>
+                        <h3>Produk 3</h3>
+                        <p>Rp 200.000</p>
+                        <button class="buy-button" data-name="Produk 3" data-price="200000">Checkout</button>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <section class="payment-section">
+        <h2>Metode Pembayaran</h2>
+        <div class="payment-methods">
+            <div class="payment">
+                <img src="https://files.catbox.moe/bogl9x.jpg" alt="OVO">
+                <span>OVO</span>
+            </div>
+            <div class="payment">
+                <img src="https://files.catbox.moe/3i2vmi.jpg" alt="DANA">
+                <span>DANA</span>
+            </div>
+            <div class="payment">
+                <img src="https://files.catbox.moe/wls8zd.jpg" alt="GoPay">
+                <span>GoPay</span>
+            </div>
+            <div class="payment">
+                <img src="https://files.catbox.moe/jzkt15.jpg" alt="QRIS">
+                <span>QRIS</span>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
