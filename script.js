@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", function() {
             return;
         }
 
-        const phoneNumber = "6285736486023";
+        const phoneNumber = "6283172517281";
         let message = "Halo, saya ingin membeli:\n\n";
         let total = 0;
 
