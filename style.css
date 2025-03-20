@@ -1,261 +1,260 @@
 :root {
---bg-color: #121212;
---text-color: #ffffff;
---primary-gradient: linear-gradient(135deg, #ff8c00, #ff0080);
---product-width: 300px;
---box-shadow: 0 5px 20px rgba(255, 136, 0, 0.3);
---border-radius: 12px;
---transition-duration: 0.4s;
+    --bg-color: #121212;
+    --text-color: #ffffff;
+    --primary-gradient: linear-gradient(135deg, #ff8c00, #ff0080);
+    --product-width: 300px;
+    --box-shadow: 0 5px 20px rgba(255, 136, 0, 0.3);
+    --border-radius: 12px;
+    --transition-duration: 0.4s;
 }
 
 body {
-font-family: 'Poppins', sans-serif;
-background-color: var(--bg-color);
-color: var(--text-color);
-margin: 0;
-padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
 }
 
-/* HEADER /
+/* HEADER */
 header {
-display: flex;
-justify-content: space-between;
-align-items: center;
-background: linear-gradient(135deg, #000, #ffcc00); / Hitam dan warna menggilap */
-padding: 15px 40px;
-color: white;
-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(135deg, #000, #ffcc00); /* Hitam dan warna menggilap */
+    padding: 15px 40px;
+    color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 nav {
-display: flex;
-align-items: center;
+    display: flex;
+    align-items: center;
 }
 
 nav ul {
-list-style: none;
-display: flex;
-gap: 30px;
-margin: 0;
-padding: 0;
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
 }
 
 nav ul li {
-display: inline;
+    display: inline;
 }
 
 nav ul li a {
-text-decoration: none;
-color: white;
-font-weight: 500;
-transition: color 0.3s;
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: color 0.3s;
 }
 
 nav ul li a:hover {
-color: #00ff7f;
+    color: #ffcc00;
 }
 
-/* Ikon keranjang /
+/* Ikon keranjang */
 #cart-button {
-background: none;
-border: none;
-font-size: 24px;
-cursor: pointer;
-color: white;
-margin-left: 20px; / Jarak dari "Kontak" */
-display: flex;
-align-items: center;
-position: relative;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+    margin-left: 20px; /* Jarak dari "Kontak" */
+    display: flex;
+    align-items: center;
+    position: relative;
 }
 
 #cart-button {
-background: none;
-border: none;
-font-size: 24px;
-cursor: pointer;
-color: white;
-margin-left: 20px; /* Dekat dengan menu "Kontak" */
-display: flex;
-align-items: center;
-position: relative;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+    margin-left: 20px; /* Dekat dengan menu "Kontak" */
+    display: flex;
+    align-items: center;
+    position: relative;
 }
 
 #cart-count {
-background: red;
-color: white;
-border-radius: 50%;
-padding: 4px 8px;
-font-size: 14px;
-position: absolute;
-top: -5px;
-right: -10px;
-font-weight: bold;
+    background: red;
+    color: white;
+    border-radius: 50%;
+    padding: 4px 8px;
+    font-size: 14px;
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    font-weight: bold;
 }
 /* SLIDER PRODUK */
 .product-slider {
-width: 95%;
-overflow: hidden;
-margin: 100px auto 30px;
+    width: 95%;
+    overflow: hidden;
+    margin: 100px auto 30px;
 }
 
 .slider-container {
-display: flex;
-overflow-x: auto;
-scroll-behavior: smooth;
-padding-bottom: 20px;
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding-bottom: 20px;
 }
 
 .slider {
-display: flex;
-gap: 30px;
-padding: 0 10px;
+    display: flex;
+    gap: 30px;
+    padding: 0 10px;
 }
 
 /* KARTU PRODUK */
 .product {
-flex: 0 0 var(--product-width);
-background: #1a1a1a;
-padding: 20px;
-text-align: center;
-border-radius: var(--border-radius);
-box-shadow: var(--box-shadow);
-transition: transform var(--transition-duration), box-shadow var(--transition-duration);
+    flex: 0 0 var(--product-width);
+    background: #1a1a1a;
+    padding: 20px;
+    text-align: center;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    transition: transform var(--transition-duration), box-shadow var(--transition-duration);
 }
 
 .product:hover {
-transform: scale(1.05);
-box-shadow: 0 10px 25px rgba(255, 136, 0, 0.4);
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(255, 136, 0, 0.4);
 }
 
 .product img {
-width: 200px;
-height: 200px;
-object-fit: cover;
-border-radius: 10px;
-margin-bottom: 15px;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
 }
 
 .product h3 {
-color: #00ff7f;
+    color: #ffcc00;
 }
 
 .buy-button {
-background: var(--primary-gradient);
-color: white;
-border: none;
-padding: 12px 25px;
-cursor: pointer;
-margin-top: 15px;
-width: 100%;
-border-radius: 8px;
-font-weight: 500;
-transition: transform var(--transition-duration), box-shadow var(--transition-duration);
+    background: var(--primary-gradient);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    cursor: pointer;
+    margin-top: 15px;
+    width: 100%;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: transform var(--transition-duration), box-shadow var(--transition-duration);
 }
 
 .buy-button:hover {
-transform: scale(1.1);
-box-shadow: 0 5px 15px rgba(255, 136, 0, 0.5);
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px rgba(255, 136, 0, 0.5);
 }
 
 /* MODAL KERANJANG */
 .modal {
-display: none;
-position: fixed;
-top: 50%;
-left: 50%;
-transform: translate(-50%, -50%);
-background: #1a1a1a;
-padding: 30px;
-border-radius: 12px;
-text-align: center;
-min-width: 350px;
-box-shadow: var(--box-shadow);
-z-index: 1000;
-animation: fadeIn 0.4s ease-in-out;
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #1a1a1a;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    min-width: 350px;
+    box-shadow: var(--box-shadow);
+    z-index: 1000;
+    animation: fadeIn 0.4s ease-in-out;
 }
 
 @keyframes fadeIn {
-from {
-opacity: 0;
-transform: translate(-50%, -55%);
-}
-to {
-opacity: 1;
-transform: translate(-50%, -50%);
-}
+    from {
+        opacity: 0;
+        transform: translate(-50%, -55%);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
 }
 
 .close-modal {
-position: absolute;
-top: 15px;
-right: 20px;
-font-size: 28px;
-cursor: pointer;
-color: #00ff7f;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 28px;
+    cursor: pointer;
+    color: #ffcc00;
 }
 
 #cart-items {
-list-style: none;
-padding: 0;
+    list-style: none;
+    padding: 0;
 }
 
 #cart-items li {
-padding: 10px;
-border-bottom: 1px solid #333;
-display: flex;
-justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #333;
+    display: flex;
+    justify-content: space-between;
 }
 
 #checkout-button {
-background: var(--primary-gradient);
-color: white;
-border: none;
-padding: 12px 20px;
-cursor: pointer;
-width: 100%;
-border-radius: 8px;
-font-weight: bold;
-transition: transform 0.3s;
+    background: var(--primary-gradient);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: transform 0.3s;
 }
 
 #checkout-button:hover {
-transform: scale(1.05);
+    transform: scale(1.05);
 }
 
 /* PEMBAYARAN */
 .payment-section {
-text-align: center;
-margin-top: 40px;
-padding: 30px;
-background: #1a1a1a;
-box-shadow: var(--box-shadow);
+    text-align: center;
+    margin-top: 40px;
+    padding: 30px;
+    background: #1a1a1a;
+    box-shadow: var(--box-shadow);
 }
 
 .payment-methods {
-display: flex;
-justify-content: center;
-gap: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
 
 .payment {
-text-align: center;
-transition: transform var(--transition-duration);
+    text-align: center;
+    transition: transform var(--transition-duration);
 }
 
 .payment:hover {
-transform: scale(1.1);
+    transform: scale(1.1);
 }
 
 .payment img {
-width: 60px;
-height: auto;
-margin-bottom: 8px;
+    width: 60px;
+    height: auto;
+    margin-bottom: 8px;
 }
 
 .payment span {
-display: block;
-font-size: 16px;
-font-weight: 500;
-color: #00ff7f;
+    display: block;
+    font-size: 16px;
+    font-weight: 500;
+    color: #ffcc00;
 }
-
