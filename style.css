@@ -21,7 +21,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: linear-gradient(135deg, #000, #ffcc00); /* Hitam dan warna menggilap */
+    background: linear-gradient(135deg, #000, #00ff7f); /* Hitam dan warna menggilap */
     padding: 15px 40px;
     color: white;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -52,7 +52,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #ffcc00;
+    color: #00ff7f;
 }
 
 /* Ikon keranjang */
@@ -136,7 +136,7 @@ nav ul li a:hover {
 }
 
 .product h3 {
-    color: #ffcc00;
+    color: #00ff7f;
 }
 
 .buy-button {
@@ -191,7 +191,7 @@ nav ul li a:hover {
     right: 20px;
     font-size: 28px;
     cursor: pointer;
-    color: #ffcc00;
+    color: #00ff7f;
 }
 
 #cart-items {
@@ -256,5 +256,5 @@ nav ul li a:hover {
     display: block;
     font-size: 16px;
     font-weight: 500;
-    color: #ffcc00;
+    color: #00ff7f;
 }
